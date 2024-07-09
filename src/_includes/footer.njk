@@ -1,0 +1,23 @@
+<footer class="container">
+    <div class="page__footer">
+        <p class="mb-1">{{ site.title }}</p>
+
+        <nav class="mb-1">
+            <ul class="footer__menu">
+                {% for item in navigation.main %} {% if item.url == currentUrl %}
+                <li class="footer__item">
+                    <span>{{ item.title }}</span>
+                </li>
+                {% else %}
+                <li class="footer__item">
+                    <a href="{{ item.url }}" class="link">{{ item.title }}</a>
+                </li>
+                {% endif %} {% endfor %}
+            </ul>
+        </nav>
+
+
+<p class="text">© 2010...2024 Все&nbsp;права защищены. При использовании материалов сайта ссылка на&nbsp;источник (в&nbsp;интернете&nbsp;&mdash; гиперссылка) обязательна.  </p>
+
+    </div>
+</footer>

@@ -1,0 +1,40 @@
+.page__footer {
+  display: grid;
+  row-gap: var(--space-2xs);
+  font-size: var(--step--1);
+  justify-items: center;
+  padding-bottom: 1em;
+}
+
+.page__footer::before {
+  content: "* * *";
+  display: block;
+  text-align: center;
+  font-size: var(--step-2);
+  padding-top: var(--space-2xl);
+}
+
+.footer__menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row: 1.1em; 
+  padding: 0;
+
+  @media (min-width: 480px) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    list-style: none;
+   
+  }
+}
+
+@media (min-width: 480px) {
+  .footer__item:not(:last-child)::after {
+    content: "|";
+    color: var(--text-colour);
+    font-weight: 700;
+    line-height: 20px;
+    padding: 0 0.5em 0 0.34em;
+  }
+}

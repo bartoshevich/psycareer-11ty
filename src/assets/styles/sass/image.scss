@@ -1,0 +1,28 @@
+
+
+.image {
+  display: block;
+  position: relative;
+  height: auto;
+  max-width: 100%;
+  filter: brightness(0.9) contrast(1.1) saturate(0.8) hue-rotate(-10deg);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-size: 0;
+  color: transparent;
+  background-color: #f0f0f0; 
+}
+
+
+
+.figcaption {
+  max-width: 65ch;
+  font-size: 14px;
+  margin: 0.6em 0 1em;
+  line-height: 1.4em;
+  font-style: italic;
+  color: var(--secondary-text-colour);
+}
+.figcaption p {
+  margin: 0.6em 0 0;
+}

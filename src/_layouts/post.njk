@@ -1,0 +1,20 @@
+
+{% extends "src/_layouts/base.njk" %}
+
+{% block content %}
+<article >
+  
+  {% include "breadcrumbs.njk" %}
+  <h1 class="page__name">{{ name | safe }}</h1>
+  
+  <p class="italic">обновлено: <time datetime="{{ last_modified_at | date('yyyy-LL-dd\'T\'HH:mm:ssZZ') }}">{{ last_modified_at | dateToFormat }}</time></p>
+  <div class="divider"></div>
+
+  <div class="main__section"> 
+  <div></div>
+  <div class="small text row-gap--m ">
+    {{ content | safe }}
+  </div>
+</article>
+{% endblock %}
+

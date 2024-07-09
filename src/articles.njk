@@ -1,0 +1,39 @@
+---
+layout: base
+title: "Cтатьи для психологов | Развитие карьеры и маркетинг"
+description: "Cтатьи, которые помогут психологам развивать карьеру, привлекать клиентов и управлять финансами. Исследуйте
+рекомендации по продвижению психологических услуг."
+currentUrl: "/articles/"
+date: "2010-02-01"
+last_modified_at: "2024-06-30"
+breadcrumb:
+  - { name: "Главная", url: "/" }
+---
+
+
+<h1 class="section__name">Статьи для развития частных психологов</h1>
+<p class="basic mb-1 text">Готовы достигать новых высот? Мы&nbsp;предлагаем полезные материалы для каждого этапа
+    развития вашей частной психологической практики. Вы&nbsp;узнаете, как эффективно продвигать свои услуги, привлекать
+    новых клиентов и&nbsp;управлять финансами. Четко структурированные советы и&nbsp;рекомендации помогут вам успешно
+    развиваться в&nbsp;профессиональном плане. Погружайтесь в&nbsp;текст, анализируйте, и&nbsp;будьте
+    уверены&nbsp;&mdash; вы&nbsp;на&nbsp;верном&nbsp;пути.
+</p>
+
+
+<div class="cards">
+  
+        {% for post in collections.articles %}
+            <article class="card">
+                <div class="img">
+                    <img  loading="lazy" decoding="async" src="{{ post.data.image }}" alt="" width="640" height="426">
+                </div>
+                <div class="text">
+                    <h2><a class="link" href="{{ post.url }}">{{ post.data.title | safe }}</a></h2>
+                    <p class="small">{{ post.data.description | safe }}</p>
+                    
+                </div>
+            </article>
+        {% endfor %}
+</div>
+
+

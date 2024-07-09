@@ -1,0 +1,60 @@
+<header class="container page__header ">
+    <div>
+        <div class="menu--flex navbar">
+
+            <div class="logoside">
+                <div class="navbar-logo"></div>
+
+                {% if currentUrl == '/' %}
+
+
+                <span class="logo__title">{{ site.title }}</span>
+
+
+                {% else %}
+
+                <a href="/" class="logo__title--link">
+
+                    <span class="logo__title">{{ site.title }}</span>
+                </a>
+                {% endif %}
+
+            </div>
+
+
+            <button id="menuButton" class="menu__button" type="button" aria-expanded="false" aria-controls="menu__list"
+                aria-label="открыть меню">
+                <svg class="menu__icon" aria-hidden="true" width="30" height="36">
+                    <use class="menu__icon-menu" href="/assets/images/sprite.svg#menu"></use>
+                    <use class="menu__icon-cross" href="/assets/images/sprite.svg#cross"></use>
+                </svg>
+            </button>
+        </div>
+
+        <div class="menu-header__wrapper">
+
+            <div class="menu__header" id="menu__list">
+
+                <nav class="menu__header__item">
+
+                    <ul class="header__item--bleed item__content nav__group">
+
+                        {% for item in navigation.main %} {% if item.url == currentUrl %}
+                        <li class="nav__li">
+                            <span class="nav__li--selected small">{{ item.title }}</span>
+                        </li>
+                        {% else %}
+                        <li class="nav__li">
+                            <a href="{{ item.url }}" class="link small">{{ item.title }}</a>
+                        </li>
+                        {% endif %} {% endfor %}
+                    </ul>
+
+
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+    </div>
+</header>

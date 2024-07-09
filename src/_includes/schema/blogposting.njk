@@ -1,0 +1,20 @@
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "BlogPosting",
+      "headline": "{{ title | safe }}",
+      "url": "{{ site.url }}{{ page.url }}",
+      "description": "{{ description | safe }}",
+      "datePublished": "{{ page.date | date('yyyy-LL-dd\'T\'HH:mm:ssZZ') }}",
+      "dateModified": "{{ last_modified_at | date('yyyy-LL-dd\'T\'HH:mm:ssZZ') }}",
+      "author": {
+        "@type": "Person",
+        "name": "Дмитрий Бартошевич"        
+      },
+      
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ site.url }}{{ page.url }}"
+      }
+    }
+  </script>

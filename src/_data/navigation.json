@@ -1,0 +1,21 @@
+{
+    "main": [
+      {
+        "title": "главная",
+        "url": "/"
+      },
+      {
+        "title": "статьи",
+        "url": "/articles/"
+      },
+      {
+        "title": "о проекте",
+        "url": "/about/"
+      },
+      {
+        "title": "полезные ссылки",
+        "url": "/poleznye-ssylki/"
+      }
+    ]
+  }
+  

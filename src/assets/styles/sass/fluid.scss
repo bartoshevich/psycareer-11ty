@@ -1,0 +1,78 @@
+/***********
+ * Fluid responsive font-sizes and space. 
+ * https://utopia.fyi/type/calculator *
+ **********/
+
+ :root {
+    --fluid-min-width: 390;
+    --fluid-max-width: 1515;
+    --fluid-screen: 100vw;
+    --fluid-bp: calc((var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) / (var(--fluid-max-width) - var(--fluid-min-width)));
+}
+
+@media screen and (min-width: 1515px) {
+    :root {
+        --fluid-screen: calc(var(--fluid-max-width) * 1px);
+    }
+}
+
+:root {
+    --f--1-min: 15.00;
+    --f--1-max: 18.40;
+    --step--1: calc(((var(--f--1-min) / 16) * 1rem) + (var(--f--1-max) - var(--f--1-min)) * var(--fluid-bp));
+    --f-0-min: 18.00;
+    --f-0-max: 23.00;
+    --step-0: calc(((var(--f-0-min) / 16) * 1rem) + (var(--f-0-max) - var(--f-0-min)) * var(--fluid-bp));
+    --f-1-min: 21.60;
+    --f-1-max: 28.75;
+    --step-1: calc(((var(--f-1-min) / 16) * 1rem) + (var(--f-1-max) - var(--f-1-min)) * var(--fluid-bp));
+    --f-2-min: 25.92;
+    --f-2-max: 35.94;
+    --step-2: calc(((var(--f-2-min) / 16) * 1rem) + (var(--f-2-max) - var(--f-2-min)) * var(--fluid-bp));
+    --f-3-min: 31.10;
+    --f-3-max: 44.92;
+    --step-3: calc(((var(--f-3-min) / 16) * 1rem) + (var(--f-3-max) - var(--f-3-min)) * var(--fluid-bp));
+    /* spaces */
+    --fc-3xs-min: (var(--fc-s-min) * 0.25);
+    --fc-3xs-max: (var(--fc-s-max) * 0.25);
+    --fc-2xs-min: (var(--fc-s-min) * 0.5);
+    --fc-2xs-max: (var(--fc-s-max) * 0.5);
+    --fc-xs-min: (var(--fc-s-min) * 0.75);
+    --fc-xs-max: (var(--fc-s-max) * 0.75);
+    --fc-s-min: (var(--f-0-min, 18));
+    --fc-s-max: (var(--f-0-max, 23));
+    --fc-m-min: (var(--fc-s-min) * 1.5);
+    --fc-m-max: (var(--fc-s-max) * 1.5);
+    --fc-l-min: (var(--fc-s-min) * 2);
+    --fc-l-max: (var(--fc-s-max) * 2);
+    --fc-xl-min: (var(--fc-s-min) * 3);
+    --fc-xl-max: (var(--fc-s-max) * 3);
+    --fc-2xl-min: (var(--fc-s-min) * 4);
+    --fc-2xl-max: (var(--fc-s-max) * 4);
+    --fc-3xl-min: (var(--fc-s-min) * 5);
+    --fc-3xl-max: (var(--fc-s-max) * 5);
+    --fc-4xl-min: (var(--fc-s-min) * 6);
+    --fc-4xl-max: (var(--fc-s-max) * 6);
+    --fc-5xl-min: (var(--fc-s-min) * 7);
+    --fc-5xl-max: (var(--fc-s-max) * 7);
+    --fc-6xl-min: (var(--fc-s-min) * 8);
+    --fc-6xl-max: (var(--fc-s-max) * 8);
+    --fc-7xl-min: (var(--fc-s-min) * 9);
+    --fc-7xl-max: (var(--fc-s-max) * 9);
+    --fc-8xl-min: (var(--fc-s-min) * 10);
+    --fc-8xl-max: (var(--fc-s-max) * 10);
+    --fc-9xl-min: (var(--fc-s-min) * 11);
+    --fc-9xl-max: (var(--fc-s-max) * 11);
+    --space-3xl-4xl: calc(((var(--fc-3xl-min) / 16) * 1rem) + (var(--fc-4xl-max) - var(--fc-3xl-min)) * var(--fluid-bp));
+    --space-2xs: calc(((var(--fc-2xs-min) / 16) * 1rem) + (var(--fc-2xs-max) - var(--fc-2xs-min)) * var(--fluid-bp));
+    --space-xs: calc(((var(--fc-xs-min) / 16) * 1rem) + (var(--fc-xs-max) - var(--fc-xs-min)) * var(--fluid-bp));
+    --space-2xl: calc(((var(--fc-2xl-min) / 16) * 1rem) + (var(--fc-2xl-max) - var(--fc-2xl-min)) * var(--fluid-bp));
+    --space-s: calc(((var(--fc-s-min) / 16) * 1rem) + (var(--fc-s-max) - var(--fc-s-min)) * var(--fluid-bp));
+    --space-m: calc(((var(--fc-m-min) / 16) * 1rem) + (var(--fc-m-max) - var(--fc-m-min)) * var(--fluid-bp));
+    --space-l: calc(((var(--fc-l-min) / 16) * 1rem) + (var(--fc-l-max) - var(--fc-l-min)) * var(--fluid-bp));
+    --space-s-xl: calc(((var(--fc-s-min) / 16) * 1rem) + (var(--fc-xl-max) - var(--fc-s-min)) * var(--fluid-bp));
+    --space-xl-4xl: calc(((var(--fc-xl-min) / 16) * 1rem) + (var(--fc-4xl-max) - var(--fc-xl-min)) * var(--fluid-bp));
+    --space-xl-2xl: calc(((var(--fc-xl-min) / 16) * 1rem) + (var(--fc-2xl-max) - var(--fc-xl-min)) * var(--fluid-bp));
+    --space-xl-5xl: calc(((var(--fc-xl-min) / 16) * 1rem) + (var(--fc-5xl-max) - var(--fc-xl-min)) * var(--fluid-bp));
+    --space-2xl-6xl: calc(((var(--fc-2xl-min) / 16) * 1rem) + (var(--fc-6xl-max) - var(--fc-2xl-min)) * var(--fluid-bp));
+}

@@ -1,0 +1,23 @@
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {% for item in breadcrumb %}
+      {
+        "@type": "ListItem",
+        "position": {{ loop.index }},
+        "name": "{{ item.name }}",
+        "item": "{{ site.url }}{{ item.url | stripHtmlExtension }}"
+      }{% if not loop.last %},{% endif %}
+      {% endfor %}
+      {% if breadcrumb.length > 0 %},{% endif %}
+      {
+        "@type": "ListItem",
+        "position": {{ breadcrumb.length + 1 }},
+        "name": "{{ title }}",
+        "item": "{{ site.url }}{{ page.url | stripHtmlExtension }}"
+      }
+    ]
+  }
+</script>

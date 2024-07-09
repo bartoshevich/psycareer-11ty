@@ -1,0 +1,23 @@
+
+.divider {
+    border-bottom: .75px dashed var(--secondary-text-colour);
+    max-width: 70ch;
+    height: 1em;
+    margin-bottom: 2em;
+  }
+  
+  .page__name {
+    font-size: var(--step-2);
+    margin-bottom: .5em;
+    max-width: 30ch;
+  }
+  
+
+  .row-gap--m {
+    display: -ms-grid;
+    display: grid;
+    grid-row-gap: var(--space-m);
+    row-gap: var(--space-m);
+    -ms-flex-line-pack: start;
+        align-content: start;
+}

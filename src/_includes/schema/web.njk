@@ -1,0 +1,16 @@
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": "{{ site.url | stripHtmlExtension }}{{ page.url | stripHtmlExtension }}",
+    "name": "{{ title | safe }}",
+    "description": "{{ description | safe }}",
+    "inLanguage": "ru",
+    "datePublished": "{{ date | date('yyyy-LL-dd\'T\'HH:mm:ssZZ') }}",
+    "dateModified": "{{ last_modified_at | date('yyyy-LL-dd\'T\'HH:mm:ssZZ') }}",
+    "publisher": {
+      "@type": "Person",
+      "name": "Дмитрий Бартошевич"
+    }
+  }
+</script>
