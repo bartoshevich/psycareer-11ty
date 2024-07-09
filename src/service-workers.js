@@ -1,7 +1,7 @@
 "use strict";
 
 (function () {
-  const version = "1.0.0.0";
+  const version = "1.0.0.2";
   const staticCacheName = `static-v${version}`;
   const imagesCacheName = `images-v${version}`;
   const mediaCacheName = `media-v${version}`;
@@ -9,17 +9,16 @@
   const maxEntries = 50;
 
   const coreFilesToCache = [
-    "./",
-    "./offline/",
-    "./articles/",
-    "./about/",
-    "./poleznye-ssylki/",
-    "./style.css",
-    "./main.js",
-    "./Inter-Regular.woff2",
-    "./Inter-Bold.woff2",
-    "./Inter-Italic.woff2",
-    './assets/images/sprite.svg'
+    "/",
+    "/offline/",
+    "/articles/",
+    "/about/",
+    "/poleznye-ssylki/",
+    "/style.css",
+    "/main.js",
+    "/Inter-Regular.woff2",
+    "/Inter-Bold.woff2",
+    "/Inter-Italic.woff2"
   ];
 
   const imagesToCache = [];
@@ -49,7 +48,7 @@
     for (const file of files) {
       try {
         await cache.add(file);
-        // console.log(`Cached: ${file}`);
+         console.log(`Cached: ${file}`);
       } catch (error) {
         console.error(`Failed to cache: ${file}`, error);
         throw error;

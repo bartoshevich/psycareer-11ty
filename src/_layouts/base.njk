@@ -1,73 +1,74 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ title | safe }}</title>
-    {% include "meta.njk" %} {% include "schema/web.njk" %} {% include
-    "schema/breadcrumbList.njk" %} {% if collections.articles %} {% for article
-    in collections.articles %} {% if article.url == page.url %} {% include
-    "schema/blogposting.njk" %} {% endif %} {% endfor %} {% endif %}
 
-    <link rel="stylesheet" href="/style.css" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title | safe }}</title>
+  {% include "meta.njk" %}
+  {% include "schema/web.njk" %}
+  {% include "schema/breadcrumbList.njk" %}
 
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-          "gtm.start": new Date().getTime(),
-          event: "gtm.js",
-        });
-        var f = d.getElementsByTagName(s)[0],
+  {% if collections.articles %}
+    {% for article in collections.articles %}
+      {% if article.url == page.url %}
+        {% include "schema/blogposting.njk" %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+  <link rel="stylesheet" href="/style.css">
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js',
+      });
+      var f = d.getElementsByTagName(s)[0],
           j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-55FGQ8RC");
-    </script>
-    <!-- End Google Tag Manager -->
-  </head>
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-55FGQ8RC');
+  </script>
+  <!-- End Google Tag Manager -->
+</head>
 
-  <body class="page__body">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-55FGQ8RC"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+<body class="page__body">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55FGQ8RC" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
-    {% set currentUrl = currentUrl %} 
-    {% include "menu.njk" %}
+  {% set currentUrl = currentUrl %}
+  {% include "menu.njk" %}
 
-
-    <main class="container">
-      {% block content %}
+  <main class="container">
+    {% block content %}
       {{ content | safe }}
-      {% endblock %}
-    </main>
+    {% endblock %}
+  </main>
 
+  {% include "footer.njk" %}
+  <script defer src="/main.js"></script>
 
-    
-    {% include "footer.njk" %}
-    <script async src="/main.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('/service-workers.js', { scope: '/' })
+        .then(function (reg) {
+          console.log('Registration succeeded. Scope is ' + reg.scope);
+        })
+        .catch(function (error) {
+          console.log('Registration failed with ' + error);
+        });
+    }
+  </script>
+</body>
 
-    <script>
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker
-          .register("/service-workers.js", { scope: "/" })
-          .then(function (reg) {
-            console.log("Registration succeeded. Scope is " + reg.scope);
-          })
-          .catch(function (error) {
-            console.log("Registration failed with " + error);
-          });
-      }
-    </script>
-  </body>
 </html>
