@@ -46,9 +46,9 @@ breadcrumb:
 <div itemscope itemtype="http://schema.org/ImageObject">
 <link itemprop="url"  href="https://res.cloudinary.com/bartoshevich/image/upload/f_auto,q_auto/v1593368843/psycareer/trenning.png">
 <img class="image" loading="lazy" decoding="async" src="https://res.cloudinary.com/bartoshevich/image/upload/f_auto,q_auto/v1593368843/psycareer/trenning.png" alt="Пример рекламы психологического тренинга с неверно обозначенной целевой аудиторией"  title="пример рекламы психологического тренинга" width="541" height="381" itemprop="contentUrl">
- <figcaption class="figcaption">
+ <div class="figcaption">
         <p>Типичная ошибка</p>
-      </figcaption>
+      </div>
 </div>
 
 <p>Не&nbsp;пытайтесь угодить всем сразу. Разделите потенциальных клиентов на&nbsp;группы по&nbsp;схожим характеристикам и&nbsp;выберите&nbsp;ту, которая наиболее интересна вам по&nbsp;ряду критериев, таких как размер группы, динамика изменений или количество конкурентов. Разрабатывайте тренинг на&nbsp;основе актуальных потребностей этой группы.</p>
