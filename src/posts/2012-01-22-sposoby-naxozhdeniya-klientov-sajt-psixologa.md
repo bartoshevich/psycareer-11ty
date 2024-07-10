@@ -77,7 +77,7 @@ breadcrumb:
 <section class="row-gap--xs">
 <h3 class="h3">Фотографии</h3>
 <p>Фотография рабочего кабинета <a class="link" href="/articles/kak-oformit-kabinet-psixologa/">формирует у&nbsp;клиента представление о&nbsp;профессиональном уровне психолога</a>. Составить взвешенное представление о&nbsp;владельце сайта помогут снимки с&nbsp;тренингов, семинаров, выступлений на&nbsp;радио и&nbsp;т.&nbsp;д. </p>
-<p>Перед тем, как выложить фотографии на&nbsp;сайт, их&nbsp;следует подготовить. Прочтите, <a class="link" href="https://bartoshevich.by/instrukcii/optimizaciya-izobrajenii/">как правильно оптимизировать изображения для сайта</a>.</p>
+<p>Перед тем, как выложить фотографии на&nbsp;сайт, их&nbsp;следует подготовить. Прочтите, <a class="link" href="https://bartoshevich.by/blog/optimizaciya-izobrajenii/">как правильно оптимизировать изображения для сайта</a>.</p>
 </section>
 
 <section class="row-gap--xs">
