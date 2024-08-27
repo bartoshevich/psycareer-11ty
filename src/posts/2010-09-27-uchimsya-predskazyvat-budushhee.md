@@ -92,7 +92,7 @@ breadcrumb:
 <a class="link" href="https://trello.com/">Решение для управления проектами и&nbsp;задачами</a>, позволяющее планировать и&nbsp;контролировать рабочий процесс. </p>
 
 
-<p>Альтернатива для жителей РФ: <a class="link" href="https://kaiten.ru/">сервис Кайтен</a>.</p>
+<p>Альтернатива для жителей РФ: <a class="link" href="https://www.leadertask.ru/">планировщик ЛидерТаск</a>, <a class="link" href="https://kaiten.ru/">сервис Кайтен</a> </p>
 
 
 </section>
