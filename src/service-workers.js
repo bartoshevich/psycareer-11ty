@@ -1,7 +1,7 @@
 "use strict";
 
 (function () {
-  const version = "1.0.0.3";
+  const version = "1.0.0.5";
   const staticCacheName = `static-v${version}`;
   const imagesCacheName = `images-v${version}`;
   const mediaCacheName = `media-v${version}`;
