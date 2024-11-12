@@ -7,7 +7,7 @@ date:   2010-07-11
 last_modified_at: 2024-07-04
 image: /assets/images/articles/kak-uznat-xoroshego-psixologa/tizer.webp
 currentUrl: "/articles/kak-uznat-xoroshego-psixologa/"
-tags: "psy-общее"
+tags: ["psy-общее"]
 keywords: "хороший психолог"
 permalink: "{{ currentUrl }}"
 breadcrumb:

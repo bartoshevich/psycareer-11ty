@@ -7,7 +7,7 @@ date:   2011-12-18
 last_modified_at: 2024-06-30
 image: /assets/images/articles/gde-mogut-rabotat-psixologi/tizer.webp
 currentUrl: "/articles/gde-mogut-rabotat-psixologi/"
-tags: "psy-общее"
+tags: ["psy-общее"]
 keywords: "где могут работать психологи"
 permalink: "{{ currentUrl }}"
 breadcrumb:

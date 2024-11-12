@@ -8,7 +8,7 @@ last_modified_at: 2024-06-30
 image: /assets/images/articles/vizitka-psixologa-alternativa/tizer.webp
 currentUrl: "/articles/vizitka-psixologa-alternativa/"
 tags: "psy-идеи"
-keywords: "визитка психолога"
+keywords: ["визитка психолога"]
 permalink: "{{ currentUrl }}"
 breadcrumb:
   - { name: "Главная", url: "/" }

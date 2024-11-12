@@ -7,7 +7,7 @@ date:   2011-02-12
 last_modified_at: 2024-06-30
 image:  /assets/images/articles/kak-psikhologu-uvelichit-dokhod/tizer.webp
 currentUrl: "/articles/kak-psikhologu-uvelichit-dokhod/"
-tags: "psy-деньги"
+tags: ["psy-деньги"]
 keywords: "зарплата психолога"
 permalink: "{{ currentUrl }}"
 breadcrumb:

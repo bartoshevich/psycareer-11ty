@@ -7,7 +7,7 @@ date:   2010-06-20
 last_modified_at: 2024-07-04
 image: /assets/images/articles/pomosh-na-ekzamenah/tizer.webp
 currentUrl: "/articles/pomosh-na-ekzamenah/"
-tags: "psy-идеи"
+tags: ["psy-идеи"]
 keywords: "психологическая подготовка к экзаменам, помощь психолога, снижение тревожности, психологическая помощь при экзаменах"
 permalink: "{{ currentUrl }}"
 breadcrumb:

@@ -7,7 +7,7 @@ date:   2012-03-01
 last_modified_at: 2024-06-30
 image:  /assets/images/articles/kak-uvlechenie-rabotoj-uvelichivaet-dohod-psixologa/tizer.webp
 currentUrl: "/articles/kak-uvlechenie-rabotoj-uvelichivaet-dohod-psixologa/"
-tags: "psy-деньги"
+tags: ["psy-деньги"]
 keywords: "оплата труда психолога"
 permalink: "{{ currentUrl }}"
 breadcrumb:

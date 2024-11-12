@@ -7,7 +7,7 @@ date:   2010-02-01
 last_modified_at: 2024-06-30
 image: /assets/images/articles/kak-rasskazat-o-sebe-psikhologu/tizer.webp
 currentUrl: "/articles/kak-rasskazat-o-sebe-psikhologu/"
-tags: "psy-позиционирование"
+tags: ["psy-позиционирование"]
 keywords: "рассказ психолога о себе, продвижение психологических услуг, привлечение клиентов, мифы о психологах"
 breadcrumb:
   - { name: "Главная", url: "/" }

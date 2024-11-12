@@ -7,7 +7,7 @@ date:   2014-11-12
 last_modified_at: 2024-06-30
 image: /assets/images/articles/kak-prodavat-treningi/tizer.webp
 currentUrl: "/articles/kak-prodavat-treningi/"
-tags: "psy-продажи"
+tags: ["psy-продажи"]
 keywords: "сбор группы на психологический тренинг"
 permalink: "{{ currentUrl }}"
 breadcrumb:

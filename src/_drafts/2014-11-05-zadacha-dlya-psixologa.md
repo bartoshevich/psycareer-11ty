@@ -8,7 +8,7 @@ date:   2014-11-05
 last_modified_at: 2024-06-30
 image:
 currentUrl: "/articles/zadacha-dlya-psixologa/"
-tags: "psy-идеи"
+tags: ["psy-идеи"]
 keywords: "cпециалист по детской психологической безопасности"
 permalink: "{{ currentUrl }}"
 breadcrumb:

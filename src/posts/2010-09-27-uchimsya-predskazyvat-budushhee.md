@@ -7,7 +7,7 @@ date:   2010-09-27
 last_modified_at: 2024-07-03
 image: /assets/images/articles/prognozirovanie-vostrebovannosti-psihologa/tizer.webp
 currentUrl: "/articles/prognozirovanie-vostrebovannosti-psihologa/"
-tags: "psy-общее"
+tags: ["psy-общее"]
 keywords: "определение востребованности психолога"
 permalink: "{{ currentUrl }}"
 breadcrumb:

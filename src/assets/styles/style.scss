@@ -1,22 +1,23 @@
 // @import '~bulma/bulma';
-@import './sass/variables.scss';
-@import './sass/reset.scss';
-@import './sass/fonts.scss';
-@import './sass/fluid.scss';
-@import './sass/global.scss';
-@import './sass/links.scss';
-@import './sass/header.scss';
-@import './sass/section.scss';
-@import './sass/list.scss';
-@import './sass/main/intro.scss';
-@import './sass/tags.scss';
-@import './sass/image.scss';
-@import './sass/cards.scss';
-@import './sass/breadcrumbs.scss';
-@import './sass/article.scss';
-@import './sass/flex-table.scss';
-@import './sass/video.scss';
-@import './sass/footer.scss';
+@use './sass/variables.scss';
+@use './sass/reset.scss';
+@use './sass/fonts.scss';
+@use './sass/fluid.scss';
+@use './sass/global.scss';
+@use './sass/links.scss';
+@use './sass/header.scss';
+@use './sass/section.scss';
+@use './sass/list.scss';
+@use './sass/main/intro.scss';
+@use './sass/tags.scss';
+@use './sass/image.scss';
+@use './sass/cards.scss';
+@use './sass/breadcrumbs.scss';
+@use './sass/article.scss';
+@use './sass/flex-table.scss';
+@use './sass/video.scss';
+@use './sass/related.scss';
+@use './sass/footer.scss';
 
 
 

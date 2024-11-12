@@ -8,7 +8,7 @@ date:   2014-12-08
 last_modified_at: 2024-06-30
 image:
 currentUrl: "/articles/idei-kotorye-meshayut-nachinayushhemu-psixologu-zarabatyvat/"
-tags: "psy-деньги"
+tags: ["psy-деньги"]
 keywords: "убеждения"
 permalink: "{{ currentUrl }}"
 breadcrumb:

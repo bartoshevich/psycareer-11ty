@@ -7,7 +7,7 @@ date:   2011-12-22
 last_modified_at: 2024-06-30
 image:  /assets/images/articles/kak-oformit-kabinet-psixologa/tizer.webp
 currentUrl: "/articles/kak-oformit-kabinet-psixologa/"
-tags: "psy-идеи"
+tags: ["psy-идеи"]
 keywords: "оформление кабинета психолога"
 permalink: "{{ currentUrl }}"
 breadcrumb:

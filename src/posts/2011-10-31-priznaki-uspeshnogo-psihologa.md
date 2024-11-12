@@ -7,7 +7,7 @@ date:   2011-10-31
 last_modified_at: 2024-06-30
 image: /assets/images/articles/priznaki-uspeshnogo-psihologa/tizer.webp
 currentUrl: "/articles/priznaki-uspeshnogo-psihologa/"
-tags: "psy-общее"
+tags: ["psy-общее"]
 keywords: "успешный психолог"
 permalink: "{{ currentUrl }}"
 breadcrumb:

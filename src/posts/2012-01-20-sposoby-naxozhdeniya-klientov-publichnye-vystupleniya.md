@@ -7,7 +7,7 @@ date:   2012-01-20
 last_modified_at: 2024-06-30
 image:  /assets/images/articles/privlechenie-klientov-publichnye-vystupleniya/tizer.webp
 currentUrl: "/articles/privlechenie-klientov-publichnye-vystupleniya/"
-tags: "psy-продажи	"
+tags: ["psy-продажи"]
 keywords: "публичные выступления психолога"
 permalink: "{{ currentUrl }}"
 breadcrumb:

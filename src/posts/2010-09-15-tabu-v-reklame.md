@@ -7,7 +7,7 @@ date:   2010-09-15
 last_modified_at: 2024-07-06
 image: /assets/images/articles/tabu-v-reklame/tizer.webp
 currentUrl: "/articles/tabu-v-reklame/"
-tags: "psy-реклама"
+tags: ["psy-реклама"]
 keywords: "ошибки в рекламе психологических услуг"
 permalink: "{{ currentUrl }}"
 breadcrumb:

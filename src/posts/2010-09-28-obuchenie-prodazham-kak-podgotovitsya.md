@@ -7,7 +7,7 @@ date:   2010-09-27
 last_modified_at: 2024-06-30
 image: /assets/images/articles/obuchenie-prodazham-kak-podgotovitsya/tizer.webp
 currentUrl: "/articles/obuchenie-prodazham-kak-podgotovitsya/"
-tags: "psy-образование"
+tags: ["psy-образование"]
 keywords: "тренинги по продажам психологических услуг"
 permalink: "{{ currentUrl }}"
 breadcrumb:

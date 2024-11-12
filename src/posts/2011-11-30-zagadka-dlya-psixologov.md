@@ -7,7 +7,7 @@ date:   2011-10-31
 last_modified_at: 2024-07-07
 image: /assets/images/articles/effektivnaya-reklama-psixologam/tizer.webp
 currentUrl: "/articles/effektivnaya-reklama-psixologam/"
-tags: "psy-реклама"
+tags: ["psy-реклама"]
 keywords: "рекламная загадка психологам"
 permalink: "{{ currentUrl }}"
 breadcrumb:

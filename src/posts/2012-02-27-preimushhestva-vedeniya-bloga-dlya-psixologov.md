@@ -7,7 +7,7 @@ date:   2012-02-27
 last_modified_at: 2024-05-30
 image:  /assets/images/articles/preimushhestva-vedeniya-bloga-dlya-psixologov/tizer.webp
 currentUrl: "/articles/preimushhestva-vedeniya-bloga-dlya-psixologov/"
-tags: "psy-образование"
+tags: ["psy-образование"]
 keywords: "блог"
 permalink: "{{ currentUrl }}"
 breadcrumb:

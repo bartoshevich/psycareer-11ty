@@ -7,7 +7,7 @@ date:   2010-09-19
 last_modified_at: 2024-07-06
 image: /assets/images/articles/pochemu-ne-nuzhno-davat-skidki/tizer.webp
 currentUrl: "/articles/pochemu-ne-nuzhno-davat-skidki/"
-tags: "psy-деньги"
+tags: ["psy-деньги"]
 keywords: "скидки на психологические услуги"
 permalink: "{{ currentUrl }}"
 breadcrumb:

@@ -8,7 +8,7 @@ date:   2013-04-05
 last_modified_at: 2024-06-30
 image:
 currentUrl: "/articles/obespechenie-konfidencialnosti-raboty-psixologa/"
-tags: "psy-интернет"
+tags: ["psy-интернет"]
 keywords: "конфиденциальность работы психолога"
 permalink: "{{ currentUrl }}"
 breadcrumb:

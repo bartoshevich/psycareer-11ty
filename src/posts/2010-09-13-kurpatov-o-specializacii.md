@@ -7,7 +7,7 @@ date:   2010-09-13
 last_modified_at: 2024-06-30
 image: /assets/images/articles/kurpatov-o-specializacii/tizer.webp
 currentUrl: "/articles/kurpatov-o-specializacii/"
-tags: "psy-позиционирование"
+tags: ["psy-позиционирование"]
 keywords: "специализация"
 permalink: "{{ currentUrl }}"
 breadcrumb:

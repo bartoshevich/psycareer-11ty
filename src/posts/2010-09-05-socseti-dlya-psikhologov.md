@@ -7,7 +7,7 @@ date:   2010-09-05
 last_modified_at: 2024-07-05
 image:  /assets/images/articles/socseti-dlya-psikhologov/tizer.webp
 currentUrl: "/articles/socseti-dlya-psikhologov/"
-tags: "psy-интернет"
+tags: ["psy-интернет"]
 keywords: "психолог в соц.сетях"
 permalink: "{{ currentUrl }}"
 breadcrumb:

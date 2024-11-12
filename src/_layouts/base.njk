@@ -6,16 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title | safe }}</title>
   {% include "meta.njk" %}
-  {% include "schema/web.njk" %}
-  {% include "schema/breadcrumbList.njk" %}
+  {% if page %}
+  {% if page.url %}
+    {% include "schema/web.njk" %}
+    {% if breadcrumb %}
+      {% include "schema/breadcrumbList.njk" %}
+    {% endif %}
+  {% endif %}
 
-  {% if collections.articles %}
+  {% if collections.articles and page.url %}
     {% for article in collections.articles %}
       {% if article.url == page.url %}
         {% include "schema/blogposting.njk" %}
       {% endif %}
     {% endfor %}
   {% endif %}
+{% endif %}
 
   <link rel="stylesheet" href="/style.css">
 

@@ -7,7 +7,7 @@ date:   2010-09-11
 last_modified_at: 2024-07-05
 image: /assets/images/articles/oshibki-pozicionirovaniya/tizer.webp
 currentUrl: "/articles/oshibki-pozicionirovaniya/"
-tags: "psy-позиционирование"
+tags: ["psy-позиционирование"]
 permalink: "{{ currentUrl }}"
 breadcrumb:
   - { name: "Главная", url: "/" }

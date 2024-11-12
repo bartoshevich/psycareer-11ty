@@ -8,7 +8,7 @@ date:   2012-02-26
 last_modified_at: 2024-06-30
 image:
 currentUrl: "/articles/besplatnye-programmy-dlya-kompyutera-psixologa/"
-tags: "psy-интернет"
+tags: ["psy-интернет"]
 keywords: "программы для Windows"
 permalink: "{{ currentUrl }}"
 breadcrumb:

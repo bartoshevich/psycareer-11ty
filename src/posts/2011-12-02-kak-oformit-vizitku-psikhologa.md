@@ -7,7 +7,7 @@ date:   2011-12-02
 last_modified_at: 2024-06-30
 image:  /assets/images/articles/kak-oformit-vizitku-psikhologa/tizer.webp
 currentUrl: "/articles/kak-oformit-vizitku-psikhologa/"
-tags: "psy-идеи"
+tags: ["psy-идеи"]
 keywords: "визитка психолога"
 permalink: "{{ currentUrl }}"
 breadcrumb:

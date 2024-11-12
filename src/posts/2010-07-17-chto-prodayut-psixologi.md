@@ -7,7 +7,7 @@ date:   2010-07-17
 last_modified_at: 2024-06-30
 image: /assets/images/articles/kak-klienty-vybirayut-psikhologa/tizer.webp
 currentUrl: "/articles/kak-klienty-vybirayut-psikhologa/"
-tags: "psy-продажи"
+tags: ["psy-продажи"]
 keywords: "выбор психолога, факторы выбора психолога, отношение психолога к клиенту "
 permalink: "{{ currentUrl }}"
 breadcrumb:

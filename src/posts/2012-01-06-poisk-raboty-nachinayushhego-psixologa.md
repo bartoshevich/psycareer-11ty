@@ -7,7 +7,7 @@ date:   2012-01-06
 last_modified_at: 2024-07-08
 image:  /assets/images/articles/poisk-raboty-nachinayushhego-psixologa/tizer.webp
 currentUrl: "/articles/poisk-raboty-nachinayushhego-psixologa/"
-tags: "psy-общее"
+tags: ["psy-общее"]
 keywords: "поиск работы"
 permalink: "{{ currentUrl }}"
 breadcrumb:

@@ -8,7 +8,7 @@ date:   2013-03-27
 last_modified_at: 2024-06-30
 image:
 currentUrl: "/articles/effektivnaya-podgotovka-seminarov-i-treningov/"
-tags: "psy-общее"
+tags: ["psy-общее"]
 keywords: "Evernote"
 permalink: "{{ currentUrl }}"
 breadcrumb:

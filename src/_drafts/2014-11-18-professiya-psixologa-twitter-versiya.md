@@ -8,7 +8,7 @@ date:   2014-11-18
 last_modified_at: 2024-06-30
 image:
 currentUrl: "/articles/professiya-psixologa-twitter-versiya/"
-tags: "psy-общее"
+tags: ["psy-общее"]
 keywords: "психолог смешно"
 permalink: "{{ currentUrl }}"
 breadcrumb:

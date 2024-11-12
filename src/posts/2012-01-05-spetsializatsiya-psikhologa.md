@@ -7,7 +7,7 @@ date:   2012-01-05
 last_modified_at: 2024-06-30
 image:  /assets/images/articles/spetsializatsiya-psikhologa/tizer.webp
 currentUrl: "/articles/spetsializatsiya-psikhologa/"
-tags: "psy-позиционирование"
+tags: ["psy-позиционирование"]
 keywords: "позиционирование психолога"
 permalink: "{{ currentUrl }}"
 breadcrumb:

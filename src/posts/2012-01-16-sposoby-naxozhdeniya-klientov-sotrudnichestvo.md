@@ -7,7 +7,7 @@ date:   2012-01-16
 last_modified_at: 2024-06-30
 image:  /assets/images/articles/sposoby-naxozhdeniya-klientov-sotrudnichestvo/tizer.webp
 currentUrl: "/articles/sposoby-naxozhdeniya-klientov-sotrudnichestvo/"
-tags: "psy-продажи	"
+tags: ["psy-продажи"]
 keywords: "привлечение клиентов через сотрудничество"
 permalink: "{{ currentUrl }}"
 breadcrumb:

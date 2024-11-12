@@ -8,7 +8,7 @@ last_modified_at: 2024-07-06
 image: /assets/images/articles/prinosyat-li-besplatnye-sessii-dengi/tizer.webp
 currentUrl: "/articles/prinosyat-li-besplatnye-sessii-dengi/"
 tags: "psy-продажи"
-keywords: "бесплатные консультации психолога"
+keywords: ["бесплатные консультации психолога"]
 permalink: "{{ currentUrl }}"
 breadcrumb:
   - { name: "Главная", url: "/" }

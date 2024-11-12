@@ -1,0 +1,61 @@
+{% if collections.articles %}
+    {# Задаем количество статей для отображения #}
+    {% set relatedArticlesLimit = 6 %}
+    
+    {% for article in collections.articles %}
+        {% if article.url == page.url %}
+            {% set currentTags = article.data.tags %}
+            {% set currentUrl = article.url %}
+            
+            {% if currentTags %}
+                {% set relatedArticles = [] %}
+                
+                {# Сначала ищем статьи с теми же тегами #}
+                {% for post in collections.articles %}
+                    {% if post.url != currentUrl %}
+                        {% for tag in currentTags %}
+                            {% if post.data.tags.includes(tag) and relatedArticles.length < relatedArticlesLimit and not relatedArticles.includes(post) %}
+                                {% set relatedArticles = (relatedArticles.push(post), relatedArticles) %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+
+                {# Если не набрали нужное количество статей, добавляем последние из других тегов #}
+                {% if relatedArticles.length < relatedArticlesLimit %}
+                    {# Создаем отсортированный массив статей #}
+                    {% set sortedArticles = collections.articles | sort(false, false, 'date') %}
+                    {% for post in sortedArticles %}
+                        {% if post.url != currentUrl and not relatedArticles.includes(post) and relatedArticles.length < relatedArticlesLimit %}
+                            {% set relatedArticles = (relatedArticles.push(post), relatedArticles) %}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+
+
+
+                {% if relatedArticles.length > 0 %}
+                    <footer class="row-gap--m related-block">
+                        <h2>Идеи для развития</h2>
+                        <div class="cards">
+                      
+                            {% for post in relatedArticles %}
+                            <article class="card">
+                                <div class="img">
+                                    <img  loading="lazy" decoding="async" src="{{ post.data.image }}" alt="" width="640" height="426">
+                                </div>
+                                <div class="text">
+                                    <h2><a class="link" href="{{ post.url }}">&#8658;  {{ post.data.title | safe }}</a></h2>
+                                    <p class="small">{{ post.data.description | safe }}</p>
+                                    
+                                </div>
+                            </article>
+                            {% endfor %}
+                       
+                        </div>
+                    </footer>
+                {% endif %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+{% endif %}

@@ -1,27 +1,17 @@
 <nav class="breadcrumbs mb-1" aria-label="breadcrumbs">
   <ol class="breadcrumbs__ol">
     <li class="breadcrumbs__li">
-      <a
-        href="/"
-        class="link link--noneline"
-        aria-label="открыть главную страницу сайта"
-      >
+      <a href="/" class="link link--noneline" aria-label="открыть главную страницу сайта">
         psycareer
       </a>
     </li>
-
     <li class="breadcrumbs__li">
-      <a
-        href="/articles/"
-        class="link link--noneline"
-        aria-label="открыть страницу с публикациями"
-      >
+      <a href="/articles/" class="link link--noneline" aria-label="открыть страницу с публикациями">
         статьи
       </a>
     </li>
-
     <li>
-      <span aria-current="page">{{ date | dateToFormat }} </span>
+      <span aria-current="page">{% if currentDate %}{{ currentDate | dateToFormat }}{% endif %}</span>
     </li>
   </ol>
-</nav>
+ </nav>

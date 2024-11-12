@@ -7,7 +7,7 @@ date:   2011-02-12
 last_modified_at: 2024-06-30
 image:  /assets/images/articles/metodika-polucheniya-obratnoy-svyazi-psihologu/tizer.webp
 currentUrl: "/articles/metodika-polucheniya-obratnoy-svyazi-psihologu/"
-tags: "psy-общее"
+tags: ["psy-общее"]
 keywords: "Net Promoter Score, обратная связь"
 permalink: "{{ currentUrl }}"
 breadcrumb:

@@ -8,7 +8,7 @@ date:   2012-03-03
 last_modified_at: 2024-06-30
 image:
 currentUrl: "/articles/videotur-po-kabinetu-psixologa/"
-tags: "psy-идеи"
+tags: ["psy-идеи"]
 keywords: "оформление кабинета психолога"
 permalink: "{{ currentUrl }}"
 breadcrumb:

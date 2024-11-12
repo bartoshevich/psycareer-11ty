@@ -7,7 +7,7 @@ date:   2010-07-22
 last_modified_at: 2024-07-04
 image: /assets/images/articles/kak-pomoch-klientu-vybrat-psikhologa/tizer.webp
 currentUrl: "/articles/kak-pomoch-klientu-vybrat-psikhologa/"
-tags: "psy-продажи"
+tags: ["psy-продажи"]
 keywords: "снижение сомнений клиента"
 permalink: "{{ currentUrl }}"
 breadcrumb:

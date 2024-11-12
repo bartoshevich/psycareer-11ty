@@ -7,7 +7,7 @@ date:   2010-06-16
 last_modified_at: 2024-07-03
 image: /assets/images/articles/privlekat-klientov-tsenoy/tizer.webp
 currentUrl: "/articles/privlekat-klientov-tsenoy/"
-tags: "psy-деньги"
+tags: ["psy-деньги"]
 keywords: "низкая цена консультации"
 permalink: "{{ currentUrl }}"
 breadcrumb:

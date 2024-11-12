@@ -7,7 +7,7 @@ date:   2010-09-09
 last_modified_at: 2024-07-05
 image:  /assets/images/articles/pochemu-lyudi-ne-idut-k-psixologu/tizer.webp
 currentUrl: "/articles/pochemu-lyudi-ne-idut-k-psixologu/"
-tags: "psy-продажи"
+tags: ["psy-продажи"]
 keywords: "cложности продвижения психологических услуг"
 permalink: "{{ currentUrl }}"
 breadcrumb:

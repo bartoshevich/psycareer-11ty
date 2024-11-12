@@ -13,7 +13,6 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "@sardine/eleventy-plugin-tinyhtml": "^0.2.0",
     "autoprefixer": "^10.4.19",
     "clean-css": "^5.3.3",
     "concurrently": "^8.2.2",
@@ -27,7 +26,7 @@
     "nunjucks-date-filter": "^0.1.1",
     "postcss-loader": "^8.1.1",
     "sass": "^1.77.6",
-    "sass-loader": "^14.2.1",
+    "sass-loader": "^16.0.3",
     "style-loader": "^4.0.0",
     "terser-webpack-plugin": "^5.3.10",
     "webpack": "^5.92.1",

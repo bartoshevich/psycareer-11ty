@@ -8,7 +8,7 @@ date:   2011-12-27
 last_modified_at: 2024-06-30
 image:  /assets/images/articles/zhitiejskaya-i-nauchnaya-psixologiya/tizer.webp
 currentUrl: "/articles/zhitiejskaya-i-nauchnaya-psixologiya/"
-tags: "psy-образование"
+tags: ["psy-образование"]
 keywords: "житейская психология"
 permalink: "{{ currentUrl }}"
 breadcrumb:

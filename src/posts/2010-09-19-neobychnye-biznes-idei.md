@@ -7,7 +7,7 @@ date:   2010-09-19
 last_modified_at: 2024-07-06
 image: /assets/images/articles/neobychnye-biznes-idei/rip.webp
 currentUrl: "/articles/neobychnye-biznes-idei/"
-tags: "psy-идеи"
+tags: ["psy-идеи"]
 keywords: "как зарабатывают психологи"
 permalink: "{{ currentUrl }}"
 breadcrumb:

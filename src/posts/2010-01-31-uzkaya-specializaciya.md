@@ -7,7 +7,7 @@ date:   2010-01-31
 last_modified_at: 2024-06-30
 image: /assets/images/articles/uzkaya-specializaciya/tizer.webp
 currentUrl: "/articles/uzkaya-specializaciya/"
-tags: "psy-позиционирование"
+tags: ["psy-позиционирование"]
 keywords: "востребованность психолога, продвижение психологических услуг, психологическая специализация, успешный психолог"
 breadcrumb:
   - { name: "Главная", url: "/" }

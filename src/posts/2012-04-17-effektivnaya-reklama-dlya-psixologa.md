@@ -7,7 +7,7 @@ date:   2012-04-17
 last_modified_at: 2024-06-30
 image:  /assets/images/articles/effektivnaya-reklama-dlya-psixologa/tizer.webp
 currentUrl: "/articles/effektivnaya-reklama-dlya-psixologa/"
-tags: "psy-реклама"
+tags: ["psy-реклама"]
 keywords: "текст рекламы психолога"
 permalink: "{{ currentUrl }}"
 breadcrumb:

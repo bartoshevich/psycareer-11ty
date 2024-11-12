@@ -7,7 +7,7 @@ date:   2010-08-26
 last_modified_at: 2024-06-30
 image: /assets/images/articles/kak-vybrat-nishu-dlya-psikhologa/tizer.webp
 currentUrl: "/articles/kak-vybrat-nishu-dlya-psikhologa/"
-tags: "psy-идеи"
+tags: ["psy-идеи"]
 keywords: "идеи для частной практики психолога"
 permalink: "{{ currentUrl }}"
 breadcrumb:

@@ -7,7 +7,7 @@ date:   2011-12-18
 last_modified_at: 2024-06-30
 image: /assets/images/articles/psixologicheskoe-obrazovanie-ozhidaniya-i-dejstvitelnost/tizer.webp
 currentUrl: "/articles/psixologicheskoe-obrazovanie-ozhidaniya-i-dejstvitelnost/"
-tags: "psy-образование"
+tags: ["psy-образование"]
 keywords: "психологическое образование"
 permalink: "{{ currentUrl }}"
 breadcrumb:

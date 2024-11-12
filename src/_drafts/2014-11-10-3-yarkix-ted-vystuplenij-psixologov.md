@@ -8,7 +8,7 @@ date:   2014-11-10
 last_modified_at: 2024-06-30
 image:
 currentUrl: "/articles/3-yarkix-ted-vystuplenij-psixologov/"
-tags: "psy-общее"
+tags: ["psy-общее"]
 keywords: "TED"
 permalink: "{{ currentUrl }}"
 breadcrumb:

@@ -7,7 +7,7 @@ date:   2011-12-15
 last_modified_at: 2024-06-30
 image:  /assets/images/articles/povyshenie-stoimosti-konsultacii/tizer.webp
 currentUrl: "/articles/povyshenie-stoimosti-konsultacii/"
-tags: "psy-деньги"
+tags: ["psy-деньги"]
 keywords: "увеличение стоимости консультации"
 permalink: "{{ currentUrl }}"
 breadcrumb:

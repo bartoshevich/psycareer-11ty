@@ -7,7 +7,7 @@ date:   2011-12-04
 last_modified_at: 2024-06-30
 image: /assets/images/articles/kak-najti-klientov-psikhologu/tizer.webp
 currentUrl: "/articles/kak-najti-klientov-psikhologu/"
-tags: "psy-продажи"
+tags: ["psy-продажи"]
 keywords: "как психологу привлечь клиента"
 permalink: "{{ currentUrl }}"
 breadcrumb:

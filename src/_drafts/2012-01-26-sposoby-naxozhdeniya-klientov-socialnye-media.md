@@ -8,7 +8,7 @@ date:   2012-01-26
 last_modified_at: 2024-06-30
 image:
 currentUrl: "/articles/sposoby-naxozhdeniya-klientov-socialnye-media/"
-tags: "psy-продажи psy-интернет"
+tags: ["psy-продажи psy-интернет"]
 keywords: "психолог и социальные сети"
 permalink: "{{ currentUrl }}"
 breadcrumb:

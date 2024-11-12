@@ -7,7 +7,7 @@ date:   2010-09-07
 last_modified_at: 2024-07-05
 image: /assets/images/articles/ocenka-stoimosti-psixologicheskix-konsultacij/tizer.webp
 currentUrl: "/articles/ocenka-stoimosti-psixologicheskix-konsultacij/"
-tags: "psy-деньги"
+tags: ["psy-деньги"]
 keywords: "цена психологической консультации, ценообразование в психологии, психотерапия цены, пакеты услуг психолога"
 permalink: "{{ currentUrl }}"
 breadcrumb:

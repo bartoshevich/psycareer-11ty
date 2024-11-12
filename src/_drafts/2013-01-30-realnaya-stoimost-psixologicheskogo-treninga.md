@@ -8,7 +8,7 @@ date:   2013-01-30
 last_modified_at: 2024-06-30
 image:
 currentUrl: "/articles/realnaya-stoimost-psixologicheskogo-treninga/"
-tags: "psy-реклама"
+tags: ["psy-реклама"]
 keywords: "привлечение клиентов на семинар"
 permalink: "{{ currentUrl }}"
 breadcrumb:

@@ -8,7 +8,7 @@ date:   2013-05-01
 last_modified_at: 2024-06-30
 image:
 currentUrl: "/articles/sovet-nachinayushhim-psixologam-po-reklame-uslug/"
-tags: "psy-реклама"
+tags: ["psy-реклама"]
 keywords: "реклама психологических услуг"
 permalink: "{{ currentUrl }}"
 breadcrumb:

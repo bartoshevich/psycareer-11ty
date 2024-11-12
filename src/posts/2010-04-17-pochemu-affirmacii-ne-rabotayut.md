@@ -7,7 +7,7 @@ date:   2010-04-17
 last_modified_at: 2024-06-30
 image: /assets/images/articles/pochemu-affirmacii-ne-rabotayut/tizer.webp
 currentUrl: "/articles/pochemu-affirmacii-ne-rabotayut/"
-tags: "psy-деньги"
+tags: ["psy-деньги"]
 keywords: "аффирмации, привлечение клиентов психологу, заработок психолога, исследование рынка"
 permalink: "{{ currentUrl }}"
 breadcrumb:
