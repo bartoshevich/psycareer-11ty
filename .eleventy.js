@@ -8,7 +8,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/images");
   eleventyConfig.addPassthroughCopy("src/assets/favicons");
   eleventyConfig.addPassthroughCopy("src/assets/scripts/index.js");
-  eleventyConfig.addPassthroughCopy("/src/service-workers.js");
+  eleventyConfig.addPassthroughCopy("src/service-workers.js");
   eleventyConfig.addPassthroughCopy("src/_headers");
   eleventyConfig.addPassthroughCopy("src/_redirects");
 
