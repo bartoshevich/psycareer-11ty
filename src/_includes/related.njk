@@ -42,7 +42,7 @@
                             {% for post in relatedArticles %}
                             <article class="card">
                                 <div class="img">
-                                    <img  loading="lazy" decoding="async" src="{{ post.data.image }}" alt="" width="640" height="426">
+                                    <img  loading="lazy" decoding="async" src="{% if post.data.image[0] == '/' %}{{ '.' + post.data.image }}{% else %}{{ post.data.image }}{% endif %}" alt="" width="640" height="426">
                                 </div>
                                 <div class="text">
                                     <h3><a class="link" href="{{ post.url }}">&#8658;  {{ post.data.title | safe }}</a></h3>
