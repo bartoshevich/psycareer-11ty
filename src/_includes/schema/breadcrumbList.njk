@@ -1,25 +1,62 @@
+{% set breadcrumbItems = [] %}
+
+{% set breadcrumbItems = breadcrumbItems | push({
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Главная",
+    "item": "/"
+}) %}
+
+{% if page.url != "/" %}
+  {% if page.url == "/articles/" %}
+    {# Для страницы со всеми статьями #}
+    {% set breadcrumbItems = breadcrumbItems | push({
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Статьи",
+        "item": "/articles/"
+    }) %}
+    
+  {% elif page.url.startsWith("/articles/") %}
+    {# Для конкретной статьи #}
+    {% set breadcrumbItems = breadcrumbItems | push({
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Статьи",
+        "item": "/articles/"
+    }) %}
+    {% set breadcrumbItems = breadcrumbItems | push({
+        "@type": "ListItem",
+        "position": 3,
+        "name": title,
+        "item": page.url
+    }) %}
+    
+  {% elif page.url == "/about/" %}
+    {# Для страницы "О проекте" #}
+    {% set breadcrumbItems = breadcrumbItems | push({
+        "@type": "ListItem",
+        "position": 2,
+        "name": "О проекте",
+        "item": "/about/"
+    }) %}
+    
+  {% elif page.url == "/poleznye-ssylki/" %}
+    {# Для страницы "Полезные ссылки" #}
+    {% set breadcrumbItems = breadcrumbItems | push({
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Полезные ссылки",
+        "item": "/poleznye-ssylki/"
+    }) %}
+  {% endif %}
+{% endif %}
+
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
-      {% if breadcrumb and breadcrumb.length > 0 %}
-        {% for item in breadcrumb %}
-        {
-          "@type": "ListItem",
-          "position": {{ loop.index }},
-          "name": "{{ item.name }}",
-          "item": "{{ site.url }}{{ item.url | stripHtmlExtension }}"
-        }{% if not loop.last %},{% endif %}
-        {% endfor %}
-        ,
-      {% endif %}
-      {
-        "@type": "ListItem",
-        "position": {{ (breadcrumb and breadcrumb.length > 0) ? breadcrumb.length + 1 : 1 }},
-        "name": "{{ title }}",
-        "item": "{{ site.url }}{{ page.url | stripHtmlExtension }}"
-      }
-    ]
+    "itemListElement": {{ breadcrumbItems | dump | safe }}
   }
-</script>
+  </script>
+  

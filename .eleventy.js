@@ -39,6 +39,10 @@ module.exports = function (eleventyConfig) {
     return array.filter(predicate);
   });
 
+  eleventyConfig.addFilter("split", function(str, separator) {
+    return str.split(separator);
+  });
+
   eleventyConfig.addFilter('some', function(array, predicate) {
     if (!array || !Array.isArray(array)) return false;
     return array.some(predicate);

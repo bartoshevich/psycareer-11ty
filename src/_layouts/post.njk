@@ -25,4 +25,8 @@
 
     {% include "related.njk" %}
 </article>
+
+<p>Текущий URL: {{ page.url }}</p>
+<p>Заголовок страницы: {{ title }}</p>
+<pre>{{ breadcrumbList | dump | safe }}</pre>
 {% endblock %}
