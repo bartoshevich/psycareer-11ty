@@ -4,7 +4,7 @@
     "@type": "ListItem",
     "position": 1,
     "name": "Главная",
-    "item": "/"
+    "item": site.url
 }) %}
 
 {% if page.url != "/" %}
@@ -14,7 +14,7 @@
         "@type": "ListItem",
         "position": 2,
         "name": "Статьи",
-        "item": "/articles/"
+        "item": site.url + "/articles/"
     }) %}
     
   {% elif page.url.startsWith("/articles/") %}
@@ -23,13 +23,13 @@
         "@type": "ListItem",
         "position": 2,
         "name": "Статьи",
-        "item": "/articles/"
+        "item": site.url + "/articles/"
     }) %}
     {% set breadcrumbItems = breadcrumbItems | push({
         "@type": "ListItem",
         "position": 3,
         "name": title,
-        "item": page.url
+        "item": site.url + page.url
     }) %}
     
   {% elif page.url == "/about/" %}
@@ -38,7 +38,7 @@
         "@type": "ListItem",
         "position": 2,
         "name": "О проекте",
-        "item": "/about/"
+        "item": site.url + "/about/"
     }) %}
     
   {% elif page.url == "/poleznye-ssylki/" %}
@@ -47,7 +47,7 @@
         "@type": "ListItem",
         "position": 2,
         "name": "Полезные ссылки",
-        "item": "/poleznye-ssylki/"
+        "item": site.url + "/poleznye-ssylki/"
     }) %}
   {% endif %}
 {% endif %}
