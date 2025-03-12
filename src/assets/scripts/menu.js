@@ -1,37 +1,28 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const menuList = document.querySelector("#menu__list");
-    const menuButton = document.querySelector("#menuButton");
-
-    if (!menuList || !menuButton) {
-     // console.error("Menu list or menu button not found");
-      return;
-  }
-
-  // console.log("Menu list and button found");
+document.addEventListener('DOMContentLoaded', () => {
+  const menuList = document.querySelector("#menu__list");
+  const menuButton = document.querySelector("#menuButton");
   
-    function mobileMenu() {     
-      let expanded = menuButton.getAttribute("aria-expanded") === "true";
-      menuButton.setAttribute("aria-expanded", !expanded);
-      menuButton.classList.toggle("menu__button--open");
-      menuList.classList.toggle("menu__header--open");
-     // console.log("Menu toggled");
+  if (!menuList || !menuButton) return;
+  
+  // Функция переключения меню
+  const toggleMenu = (open = null) => {
+    const isExpanded = menuButton.getAttribute("aria-expanded") === "true";
+    const newState = open !== null ? open : !isExpanded;
+    
+    menuButton.setAttribute("aria-expanded", newState);
+    menuButton.classList.toggle("menu__button--open", newState);
+    menuList.classList.toggle("menu__header--open", newState);
+  };
+  
+  // Обработчик клика по кнопке меню
+  menuButton.addEventListener("click", () => toggleMenu());
+  
+  // Закрытие меню при клике вне его области
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest("#menu__list") && 
+        !e.target.closest("#menuButton") && 
+        menuButton.getAttribute("aria-expanded") === "true") {
+      toggleMenu(false);
     }
-  
-    menuButton.addEventListener("click", mobileMenu);
-  
-    window.addEventListener("click", (e) => {
-      
-      const target = e.target;
-      if (!target.closest("#menu__list") && !target.closest("#menuButton")) {
-        let expanded = menuButton.getAttribute("aria-expanded") === "true";
-        if (expanded) {
-         
-          menuButton.setAttribute("aria-expanded", false);
-          menuList.classList.remove("menu__header--open");
-          menuButton.classList.remove("menu__button--open");
-         // console.log("Menu closed by clicking outside");
-        }
-      }
-    });
-  });
-  
+  }, { passive: true });
+});
