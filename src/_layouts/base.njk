@@ -6,20 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title | safe }}</title>
   {% include "meta.njk" %}
-  {% if page and page.url %}
-  {% include "schema/web.njk" %}
-  {% include "schema/breadcrumbList.njk" %}
-{% endif %}
+  {% include "schema/schema-graph.njk" %}
 
-{% if collections.articles %}
-  {% for article in collections.articles %}
-    {% if article.url == page.url %}
-      {% include "schema/blogposting.njk" %}
-    {% endif %}
-  {% endfor %}
-{% endif %}
 
-  <link rel="stylesheet" href="/style.css">
+
+
+
+  <link rel="stylesheet" href="/style.css?v={{ build.timestamp }}">
 
   <!-- Google Tag Manager -->
   <script>
@@ -57,7 +50,7 @@
   </main>
 
   {% include "footer.njk" %}
-  <script defer src="/main.js"></script>
+  <script defer src="/main.js?v={{ build.timestamp }}"></script>
 
   <script>
     (async () => {

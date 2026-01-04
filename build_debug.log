@@ -1,0 +1,20 @@
+[11ty] Writing public/service-workers.js from ./src/service-workers.njk
+[11ty] Writing public/robots.txt from ./src/robots.njk
+[11ty] Writing public/sitemap.xml from ./src/sitemap.njk
+[11ty] Problem writing Eleventy templates: (more in DEBUG output)
+[11ty] 1. Having trouble writing to "public/about/index.html" from "./src/about.njk" (via EleventyTemplateError)
+[11ty] 2. (./src/_layouts/base.njk)
+[11ty]   Template render error: (/home/barsan/Documents/sites/psycareer-11ty/src/_includes/schema/schema-graph.njk) [Line 81, Column 54]
+[11ty]   parseSignature: expected comma after expression (via Template render error)
+[11ty] 
+[11ty] Original error stack trace: Template render error: (./src/_layouts/base.njk)
+[11ty]   Template render error: (/home/barsan/Documents/sites/psycareer-11ty/src/_includes/schema/schema-graph.njk) [Line 81, Column 54]
+[11ty]   parseSignature: expected comma after expression
+[11ty]     at Object._prettifyError (/home/barsan/Documents/sites/psycareer-11ty/node_modules/nunjucks/src/lib.js:32:11)
+[11ty]     at /home/barsan/Documents/sites/psycareer-11ty/node_modules/nunjucks/src/environment.js:464:19
+[11ty]     at eval (eval at _compile (/home/barsan/Documents/sites/psycareer-11ty/node_modules/nunjucks/src/environment.js:527:18), <anonymous>:42:11)
+[11ty]     at /home/barsan/Documents/sites/psycareer-11ty/node_modules/nunjucks/src/environment.js:28:5
+[11ty]     at RawTask.call (/home/barsan/Documents/sites/psycareer-11ty/node_modules/asap/asap.js:40:19)
+[11ty]     at flush (/home/barsan/Documents/sites/psycareer-11ty/node_modules/asap/raw.js:50:29)
+[11ty]     at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+[11ty] Copied 3 files / Wrote 0 files in 0.43 seconds (v2.0.1)

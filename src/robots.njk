@@ -3,64 +3,180 @@ permalink: '/robots.txt'
 eleventyExcludeFromCollections: true
 ---
 
-User-agent: * 
-Allow: / 
+{# Базовое правило: разрешить всё для всех #}
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /checkout/
+Disallow: /cart/
+Disallow: /account/
+Disallow: /wishlist/
+Disallow: /compare/
+Disallow: /search
+Disallow: /api/
+Disallow: /cgi-bin/
+Disallow: /*.pdf$
+Disallow: /tmp/
+Disallow: /cache/
+Disallow: /*?sort=
+Disallow: /*?filter=
+Disallow: /*?page=
+Disallow: /*?utm_
+Disallow: /*?ref=
+Disallow: /*?fbclid=
+Disallow: /*?gclid=
+Disallow: /*?yclid=
+Disallow: /*&sort=
+Disallow: /*&filter=
+Disallow: /*&page=
 
-Sitemap: https://www.psycareer.ru/sitemap.xml
-Host: www.psycareer.ru
 
-User-agent: Amazonbot
-Disallow: /
+{# Классические поисковики (явное разрешение) #}
+User-agent: Googlebot
+Allow: /
 
-User-agent: anthropic-ai
-Disallow: /
+User-agent: Bingbot
+Allow: /
 
-User-agent: AwarioRssBot
-User-agent: AwarioSmartBot
-Disallow: /
+User-agent: YandexBot
+Allow: /
 
-User-agent: Bytespider
-Disallow: /
+User-agent: Mail.Ru
+Allow: /
 
-User-agent: CCBot
-Disallow: /
+User-agent: Applebot
+Allow: /
+
+{# ===========================================
+# ГЕНЕРАТИВНЫЕ ПОИСКОВИКИ (GEO)
+# Критично для видимости в AI-ответах
+# ===========================================  #}
+
+
+# --- OpenAI ---
+User-agent: GPTBot
+Allow: /
 
 User-agent: ChatGPT-User
-Disallow: /
+Allow: /
 
+# --- Anthropic (Claude) ---
 User-agent: ClaudeBot
-Disallow: /
+Allow: /
 
 User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# --- Perplexity ---
+User-agent: PerplexityBot
+Allow: /
+
+# --- Google AI (Gemini, AI Overviews) ---
+User-agent: Google-Extended
+Allow: /
+
+# --- Meta AI ---
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# --- Cohere ---
+User-agent: cohere-ai
+Allow: /
+
+# --- You.com ---
+User-agent: YouBot
+Allow: /
+
+# --- Microsoft Copilot (через Bing) ---
+# Использует Bingbot — уже открыт выше
+
+# --- Apple Intelligence / Siri ---
+# Использует Applebot — уже открыт выше
+
+# --- Brave Search ---
+User-agent: Brave
+Allow: /
+
+# --- Neeva (теперь часть Snowflake) ---
+User-agent: NeevaBot
+Allow: /
+
+
+{# ===========================================
+# БЛОКИРОВКА НЕЖЕЛАТЕЛЬНЫХ БОТОВ
+# (парсеры, спам, агрессивные краулеры)
+# ===========================================  #}
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
 Disallow: /
 
-User-agent: cohere-ai
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
 Disallow: /
 
 User-agent: DataForSeoBot
 Disallow: /
 
-User-agent: FacebookBot
-Disallow: /
-
-User-agent: Google-Extended
-Disallow: /
-
-User-agent: GPTBot
+User-agent: Bytespider
 Disallow: /
 
 User-agent: magpie-crawler
 Disallow: /
 
-User-agent: omgili
-Disallow: /
-
 User-agent: omgilibot
 Disallow: /
 
-User-agent: peer39_crawler
-User-agent: peer39_crawler/1.0
+User-agent: Amazonbot
 Disallow: /
 
-User-agent: PerplexityBot
+User-agent: PetalBot
 Disallow: /
+
+User-agent: SeznamBot
+Disallow: /
+
+User-agent: Sogou
+Disallow: /
+
+User-agent: Exabot
+Disallow: /
+
+User-agent: ZoominfoBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: img2dataset
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: ia_archiver
+Disallow: /
+
+User-agent: archive.org_bot
+Disallow: /
+
+{# ===========================================
+# СЛУЖЕБНАЯ ИНФОРМАЦИЯ
+# ===========================================  #}
+
+Sitemap: https://www.psycareer.ru/sitemap.xml
+Host: www.psycareer.ru
+

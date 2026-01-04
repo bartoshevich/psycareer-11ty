@@ -1,0 +1,56 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Можно ли использовать на Windows?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да. Процесс установки: 1) Скачайте Ollama для Windows: https://ollama.com/download/windows 2) Запустите установщик 3) Откройте PowerShell или Command Prompt 4) Выполните: ollama pull llama3.1:8b 5) Создайте Modelfile (аналогично Linux-инструкции)"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Нужна ли видеокарта (GPU)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Не обязательно, но желательно. Без GPU (только CPU): Llama 3.1 8B работает со скоростью ~15-20 токенов/сек (ответ за 10-20 сек). С NVIDIA GPU (8GB+ VRAM): Скорость возрастает в 5-10 раз (~100-200 токенов/сек, почти мгновенно). Для базового использования (чек-ины, декомпозиция) CPU достаточно."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Как клиент может сохранить историю диалогов?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Вручную. Варианты: Простой (копипаст): После важного диалога скопировать вывод терминала и вставить в текстовый файл. Автоматический (для продвинутых): ollama run depression-support | tee ~/mental-health-log-$(date +%Y-%m-%d).txt. НО: Для большинства клиентов с депрессией ручное сохранение — избыточная когнитивная нагрузка. Лучше не сохранять вообще."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Что делать, если клиент жалуется на медленные ответы?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Три варианта: 1) Использовать меньшую модель: ollama pull mistral:7b-instruct (быстрее Llama 3.1 8B, но чуть ниже качество) 2) Купить GPU: NVIDIA RTX 3060 (12GB) или выше — скорость возрастёт в 10 раз 3) Вернуться к облаку: Claude/ChatGPT с защитами (обезличивание, удаление через 30 дней)"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Безопасно ли это с точки зрения данных?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "При локальной установке: Данные НЕ отправляются в интернет, модель работает полностью офлайн, история хранится только на компьютере клиента, можно удалить всё: rm -rf ~/.ollama. НО: Компьютер клиента должен быть защищён: пароль на вход, шифрование диска (FileVault на macOS, LUKS на Linux), антивирус."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Можно ли использовать другие модели?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да. Альтернативы Llama 3.1: Mistral 7B (быстрее, чуть менее эмпатична), Gemma 2 (9B) от Google (хороший русский), Phi-3 Medium (14B) качественнее, но медленнее. Команда для установки: ollama pull mistral:7b-instruct; ollama create my-model -f ~/modelfile"
+      }
+    }
+  ]
+}
+</script>

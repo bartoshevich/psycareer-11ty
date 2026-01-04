@@ -1,9 +1,13 @@
+---
+permalink: /service-workers.js
+eleventyExcludeFromCollections: true
+---
 "use strict";
 
 (function () {
   // Конфигурация
   const CONFIG = {
-    version: "v2.0.2::",
+    version: "v{{ build.timestamp }}::",
     debug: false,
     caches: {
       static: "static-resources",
@@ -27,8 +31,8 @@
     "/articles/",
     "/about/",
     "/poleznye-ssylki/",
-    "/style.css",
-    "/main.js",
+    "/style.css?v={{ build.timestamp }}",
+    "/main.js?v={{ build.timestamp }}",
     "/Inter-Regular.woff2",
     "/Inter-Bold.woff2",
     "/Inter-Italic.woff2"

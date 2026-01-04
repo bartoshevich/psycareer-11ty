@@ -1,0 +1,187 @@
+{% set breadcrumbItems = [] %}
+
+{% set breadcrumbItems = breadcrumbItems | push({
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Главная",
+    "item": site.url
+}) %}
+
+{% if page.url != "/" %}
+  {% if page.url == "/articles/" %}
+    {% set breadcrumbItems = breadcrumbItems | push({
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Статьи",
+        "item": site.url + "/articles/"
+    }) %}
+  {% elif page.url.startsWith("/articles/") %}
+    {% set breadcrumbItems = breadcrumbItems | push({
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Статьи",
+        "item": site.url + "/articles/"
+    }) %}
+    {% set breadcrumbItems = breadcrumbItems | push({
+        "@type": "ListItem",
+        "position": 3,
+        "name": title,
+        "item": site.url + page.url
+    }) %}
+  {% elif page.url == "/about/" %}
+    {% set breadcrumbItems = breadcrumbItems | push({
+        "@type": "ListItem",
+        "position": 2,
+        "name": "О проекте",
+        "item": site.url + "/about/"
+    }) %}
+  {% elif page.url == "/poleznye-ssylki/" %}
+    {% set breadcrumbItems = breadcrumbItems | push({
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Полезные ссылки",
+        "item": site.url + "/poleznye-ssylki/"
+    }) %}
+  {% endif %}
+{% endif %}
+
+{% set isArticle = false %}
+{% if collections.articles %}
+  {% for article in collections.articles %}
+    {% if article.url == page.url %}
+      {% set isArticle = true %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+{% set pageType = "WebPage" %}
+{% if page.url == "/articles/" %}
+  {% set pageType = "CollectionPage" %}
+{% elif page.url == "/about/" %}
+  {% set pageType = "AboutPage" %}
+{% elif page.url == "/poleznye-ssylki/" %}
+  {% set pageType = "CollectionPage" %}
+{% elif isArticle %}
+  {% set pageType = "ItemPage" %}
+{% endif %}
+{% set pageTitle = title | default(site.title) %}
+{% set pageDescription = description | default(site.description) %}
+{% set pageImage = image | default(site.image) %}
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}#website",
+      "url": "{{ site.url }}",
+      "name": "{{ site.title }}",
+      "description": "{{ site.description }}",
+      "inLanguage": "ru",
+      "publisher": {
+        "@id": "{{ site.url }}#person"
+      }
+    },
+    {
+      "@type": "{{ pageType }}",
+      "@id": "{{ site.url }}{{ page.url }}#webpage",
+      "url": "{{ site.url | stripHtmlExtension }}{{ page.url | stripHtmlExtension }}",
+      "name": "{{ pageTitle | safe }}",
+      "description": "{{ pageDescription | safe }}",
+      "inLanguage": "ru"{% if date %},
+      "datePublished": "{{ date | date }}"{% endif %}{% if last_modified_at %},
+      "dateModified": "{{ last_modified_at | date }}"{% endif %}{% if pageImage %},
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "{{ site.url }}{{ pageImage }}"
+      }{% endif %},
+      "isPartOf": {
+        "@id": "{{ site.url }}#website"
+      },
+      "publisher": {
+        "@id": "{{ site.url }}#person"
+      },
+      "breadcrumb": {
+        "@id": "{{ site.url }}{{ page.url }}#breadcrumb"
+      }{% if isArticle %},
+      "mainEntity": {
+        "@id": "{{ site.url }}{{ page.url }}#article"
+      }{% endif %}
+    }{% if isArticle %},
+    {
+      "@type": "BlogPosting",
+      "@id": "{{ site.url }}{{ page.url }}#article",
+      "headline": "{{ pageTitle | safe }}",
+      "url": "{{ site.url }}{{ page.url }}",
+      "description": "{{ pageDescription | safe }}",{% if pageImage %}
+      "image": "{{ site.url }}{{ pageImage }}",{% endif %}{% if tags and tags.length > 0 %}
+      "articleSection": "{{ tags[0] }}",{% endif %}
+      "datePublished": "{{ page.date | date }}",
+      "dateModified": "{{ last_modified_at | date }}",
+      "author": {
+        "@id": "{{ site.url }}#person"
+      },
+      "publisher": {
+        "@id": "{{ site.url }}#person"
+      },
+      "mainEntityOfPage": {
+        "@id": "{{ site.url }}{{ page.url }}#webpage"
+      }{% if hasFAQ or hasHowTo %},
+      "hasPart": [{% if hasFAQ and faqItems %}
+        {
+          "@id": "{{ site.url }}{{ page.url }}#faq"
+        }{% if hasHowTo and howTo %},{% endif %}{% endif %}{% if hasHowTo and howTo %}
+        {
+          "@id": "{{ site.url }}{{ page.url }}#howto"
+        }{% endif %}
+      ]{% endif %}
+    }{% endif %},
+    {
+      "@type": "Person",
+      "@id": "{{ site.url }}#person",
+      "name": "Михаил Купала",
+      "jobTitle": "Консультант по маркетингу для психологов",
+      "description": "Эксперт по продвижению психологических услуг",
+      "knowsAbout": [
+        "Маркетинг для психологов",
+        "Digital-маркетинг",
+        "Продвижение психологических услуг"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ site.url }}{{ page.url }}#breadcrumb",
+      "itemListElement": {{ breadcrumbItems | dump | safe }}
+    }{% if isArticle and hasFAQ and faqItems %},
+    {
+      "@type": "FAQPage",
+      "@id": "{{ site.url }}{{ page.url }}#faq",
+      "mainEntity": [{% for item in faqItems %}
+        {
+          "@type": "Question",
+          "name": "{{ item.question }}",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "{{ item.answer }}"
+          }
+        }{% if not loop.last %},{% endif %}{% endfor %}
+      ]
+    }{% endif %}{% if isArticle and hasHowTo and howTo %},
+    {
+      "@type": "HowTo",
+      "@id": "{{ site.url }}{{ page.url }}#howto",
+      "name": "{{ howTo.name }}",
+      "description": "{{ howTo.description }}",
+      "totalTime": "{{ howTo.totalTime }}",
+      "step": [{% for step in howTo.steps %}
+        {
+          "@type": "HowToStep",
+          "name": "{{ step.name }}",
+          "text": "{{ step.text }}"
+        }{% if not loop.last %},{% endif %}{% endfor %}
+      ]
+    }{% endif %}
+  ]
+}
+</script>

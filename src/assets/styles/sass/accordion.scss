@@ -1,0 +1,54 @@
+details {
+  border-bottom: 1px solid var(--secondary-text-colour);
+  padding: 0.8em 0;
+  margin-bottom: 0;
+}
+
+details:last-of-type {
+  border-bottom: none;
+}
+
+
+details[open] {
+  padding-bottom: 0.8em;
+}
+
+summary {
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  padding: 0.3em 0;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::before {
+  content: '▶';
+  display: inline-block;
+  margin-right: 0.5em;
+  transition: transform 0.2s ease;
+}
+
+details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+summary:hover {
+  color: var(--link);
+}
+
+summary:focus {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+details .details-content {
+  margin-top: 0.8em;
+  display: grid;
+  grid-row-gap: var(--space-xs);
+  row-gap: var(--space-xs);
+}
+

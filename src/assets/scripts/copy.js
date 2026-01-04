@@ -1,6 +1,6 @@
 (() => {
-    const MIN_COPY_LENGTH = 300;
-    const MAX_COPY_LENGTH = 700;
+    const MIN_COPY_LENGTH = 2800;
+    const MAX_COPY_LENGTH = 3200;
     const MAX_UNMODIFIED_LENGTH = 250;
     const sourceLink = " [Источник: https://psycareer.ru]";
 

@@ -1,0 +1,37 @@
+.toc {
+  background: var(--background-colour);
+  border: 1px solid var(--secondary-text-colour);
+  border-radius: 0.5em;
+  padding: var(--space-s) var(--space-m);
+  margin-bottom: var(--space-l);
+}
+
+.toc__title {
+  font-size: var(--step-0);
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+
+.toc__list {
+  list-style: decimal;
+  padding-left: 1.5em;
+  display: grid;
+  grid-row-gap: var(--space-2xs);
+  row-gap: var(--space-2xs);
+}
+
+.toc__list a {
+  color: var(--text-colour);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.toc__list a:hover {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+.toc__list a:focus {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
