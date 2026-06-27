@@ -80,7 +80,7 @@
       "description": "{{ site.description }}",
       "inLanguage": "ru",
       "publisher": {
-        "@id": "{{ site.url }}#person"
+        "@id": "{{ site.url }}/#organization"
       }
     },
     {
@@ -100,7 +100,7 @@
         "@id": "{{ site.url }}#website"
       },
       "publisher": {
-        "@id": "{{ site.url }}#person"
+        "@id": "{{ site.url }}/#organization"
       },
       "breadcrumb": {
         "@id": "{{ site.url }}{{ page.url }}#breadcrumb"
@@ -123,7 +123,7 @@
         "@id": "{{ site.url }}#person"
       },
       "publisher": {
-        "@id": "{{ site.url }}#person"
+        "@id": "{{ site.url }}/#organization"
       },
       "mainEntityOfPage": {
         "@id": "{{ site.url }}{{ page.url }}#webpage"
@@ -140,14 +140,13 @@
     {
       "@type": "Person",
       "@id": "{{ site.url }}#person",
-      "name": "Михаил Купала",
-      "jobTitle": "Консультант по маркетингу для психологов",
-      "description": "Эксперт по продвижению психологических услуг",
-      "knowsAbout": [
-        "Маркетинг для психологов",
-        "Digital-маркетинг",
-        "Продвижение психологических услуг"
-      ]
+      "name": "Дмитрий Бартошевич"
+    },
+    {
+      "@type": "Organization",
+      "@id": "{{ site.url }}/#organization",
+      "name": "psycareer.org",
+      "url": "{{ site.url }}"
     },
     {
       "@type": "BreadcrumbList",
