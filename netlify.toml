@@ -1,11 +1,5 @@
 [[redirects]]
-  from = "https://www.psycareer.ru/*"
-  to = "https://www.psycareer.org/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://psycareer.ru/*"
+  from = "/*"
   to = "https://www.psycareer.org/:splat"
   status = 301
   force = true
