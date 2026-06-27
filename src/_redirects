@@ -1,8 +1,4 @@
-# --- .ru → .org domain migration (catch-all, Cloudflare Pages) ---
-https://www.psycareer.ru/*  https://www.psycareer.org/:splat  301
-https://psycareer.ru/*      https://www.psycareer.org/:splat  301
-
-# --- legacy slug redirects ---
+# --- legacy slug redirects (.ru catch-all handled by netlify.toml) ---
 /uzkaya-specializaciya/  /articles/uzkaya-specializaciya/ 301
 /mify-o-psixologax-pomexa-ili-pomoshh/  /articles/kak-rasskazat-o-sebe-psikhologu/ 301
 /ne-sekret-smotrite-po-storonam/  /articles/pochemu-affirmacii-ne-rabotayut/ 301
