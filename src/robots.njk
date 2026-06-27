@@ -1,118 +1,26 @@
 ---
-permalink: '/robots.txt'
+permalink: /robots.txt
 eleventyExcludeFromCollections: true
 ---
+# Permissive default: search engines, AI crawlers, archive bots — all allowed
+# by inheritance from User-agent: *. Explicitly listed below are only the bots
+# we want to RESTRICT or apply special rules to.
 
-{# Базовое правило: разрешить всё для всех #}
 User-agent: *
 Allow: /
 Disallow: /admin/
-Disallow: /checkout/
-Disallow: /cart/
-Disallow: /account/
-Disallow: /wishlist/
-Disallow: /compare/
-Disallow: /search
 Disallow: /api/
 Disallow: /cgi-bin/
-Disallow: /*.pdf$
 Disallow: /tmp/
 Disallow: /cache/
-Disallow: /*?sort=
-Disallow: /*?filter=
-Disallow: /*?page=
+Disallow: /search
 Disallow: /*?utm_
 Disallow: /*?ref=
 Disallow: /*?fbclid=
 Disallow: /*?gclid=
 Disallow: /*?yclid=
-Disallow: /*&sort=
-Disallow: /*&filter=
-Disallow: /*&page=
 
-
-{# Классические поисковики (явное разрешение) #}
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: YandexBot
-Allow: /
-
-User-agent: Mail.Ru
-Allow: /
-
-User-agent: Applebot
-Allow: /
-
-{# ===========================================
-# ГЕНЕРАТИВНЫЕ ПОИСКОВИКИ (GEO)
-# Критично для видимости в AI-ответах
-# ===========================================  #}
-
-
-# --- OpenAI ---
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-# --- Anthropic (Claude) ---
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-# --- Perplexity ---
-User-agent: PerplexityBot
-Allow: /
-
-# --- Google AI (Gemini, AI Overviews) ---
-User-agent: Google-Extended
-Allow: /
-
-# --- Meta AI ---
-User-agent: meta-externalagent
-Allow: /
-
-User-agent: FacebookBot
-Allow: /
-
-# --- Cohere ---
-User-agent: cohere-ai
-Allow: /
-
-# --- You.com ---
-User-agent: YouBot
-Allow: /
-
-# --- Microsoft Copilot (через Bing) ---
-# Использует Bingbot — уже открыт выше
-
-# --- Apple Intelligence / Siri ---
-# Использует Applebot — уже открыт выше
-
-# --- Brave Search ---
-User-agent: Brave
-Allow: /
-
-# --- Neeva (теперь часть Snowflake) ---
-User-agent: NeevaBot
-Allow: /
-
-
-{# ===========================================
-# БЛОКИРОВКА НЕЖЕЛАТЕЛЬНЫХ БОТОВ
-# (парсеры, спам, агрессивные краулеры)
-# ===========================================  #}
-
+# SEO reconnaissance crawlers — limit or block
 User-agent: AhrefsBot
 Crawl-delay: 10
 
@@ -131,18 +39,23 @@ Disallow: /
 User-agent: DataForSeoBot
 Disallow: /
 
-User-agent: Bytespider
+User-agent: ZoominfoBot
 Disallow: /
 
-User-agent: magpie-crawler
+User-agent: Diffbot
+Disallow: /
+
+# Mass scrapers — no exposure value
+User-agent: img2dataset
 Disallow: /
 
 User-agent: omgilibot
 Disallow: /
 
-User-agent: Amazonbot
+User-agent: magpie-crawler
 Disallow: /
 
+# Regional bots without target audience — save crawl budget
 User-agent: PetalBot
 Disallow: /
 
@@ -152,31 +65,5 @@ Disallow: /
 User-agent: Sogou
 Disallow: /
 
-User-agent: Exabot
-Disallow: /
-
-User-agent: ZoominfoBot
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
-
-User-agent: img2dataset
-Disallow: /
-
-User-agent: Diffbot
-Disallow: /
-
-User-agent: ia_archiver
-Disallow: /
-
-User-agent: archive.org_bot
-Disallow: /
-
-{# ===========================================
-# СЛУЖЕБНАЯ ИНФОРМАЦИЯ
-# ===========================================  #}
-
 Sitemap: {{ site.url }}/sitemap.xml
 Host: www.psycareer.org
-
