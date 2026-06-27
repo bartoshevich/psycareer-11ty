@@ -2,6 +2,7 @@ const CleanCSS = require("clean-css");
 const htmlMinifier = require('html-minifier-terser');
 const { DateTime } = require("luxon");
 const dateFilter = require("nunjucks-date-filter");
+const { execFileSync } = require("child_process");
 
 module.exports = function (eleventyConfig) {
   // Копируем статические файлы
@@ -182,6 +183,16 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("cleanUrl", (url) => {
     return url.replace(/\/index\.html$/, "/");
+  });
+
+  // git-дата последнего изменения файла (для <lastmod> в sitemap)
+  eleventyConfig.addFilter("gitLastModified", (inputPath) => {
+    try {
+      return execFileSync("git", ["log", "-1", "--format=%aI", "--", inputPath],
+        { encoding: "utf8" }).trim() || null;
+    } catch {
+      return null;
+    }
   });
 
   // Фильтр для минификации CSS
